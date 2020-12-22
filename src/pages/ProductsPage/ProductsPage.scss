@@ -1,0 +1,11 @@
+.ProductsPage {
+    background-color: white;
+
+    .productsPageBody {
+        height: calc(100% - 80px);
+
+        .productsListContainer {
+            margin: 20px;
+        }
+    }
+}
