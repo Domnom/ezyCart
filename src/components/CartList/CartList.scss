@@ -1,0 +1,70 @@
+.cartList {
+
+    height: 100%;
+    width: 100%;
+    font-family: "Helvetica Neue";
+
+    .cartListHeader {
+
+        display: grid;
+        grid-template-columns: [name]auto [price]100px [quantity]100px [total]100px [buttons]100px;
+        height: 50px;
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 5px 5px 0px 0px;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 2px;
+        font-size: 13px;
+        background-color: rgba(179, 209, 165, 1);
+        line-height: 50px;
+
+        .cartListNameTitle,
+        .cartListPriceTitle,
+        .cartListQuantityTitle,
+        .cartListTotalTitle,
+        .cartListActionsTitle {
+            text-indent: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .cartListNameTitle,
+        .cartListPriceTitle,
+        .cartListQuantityTitle,
+        .cartListTotalTitle {
+            border-right: 1px solid rgba(0,0,0,0.05);
+        }
+
+    }
+
+    .cartListBody {
+        width: 100%;
+        height: calc(100% - 50px);
+        overflow: scroll;
+
+        .cartItem {
+            border-top: none;
+        }
+        .cartItem:last-child {
+            border-radius: 0px 0px 5px 5px;
+        }
+
+        .cartListEmpty {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            border-top: none;
+            border-radius: 0px 0px 5px 5px;
+            font-weight: 100;
+            letter-spacing: 1px;
+        }
+    }
+
+    
+
+}
