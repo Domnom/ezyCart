@@ -3,10 +3,16 @@
  */
 import React from 'react';
 
+/**
+ * @requires Pages
+ */
+import { ProductsPage } from './pages';
+
+
 function App() {
     return (
         <div className="App">
-            Hello world!
+            <ProductsPage/>
         </div>
     );
 }
