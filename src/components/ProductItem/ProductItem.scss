@@ -1,0 +1,120 @@
+// -- Create a grid layout with 3 columns. Allow the product name to have max space
+.productItem {
+    display: grid;
+    grid-template-columns: [name]auto [price]100px [buttons]100px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid rgba(0,0,0,0.1);
+    font-family: "Helvetica Neue";
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 300;
+
+
+    .productName,
+    .productPrice,
+    .productButtons {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .productName,
+    .productPrice {
+        text-indent: 15px;
+        border-right: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .productButtons {
+        display: inline-grid;
+        grid-template-columns: [pad1]10px [buttonarea]auto [pad2]10px;
+        grid-template-rows: 10px [buttonarea]auto 10px;
+
+        button {
+            grid-column: buttonarea;
+            grid-row: buttonarea;
+            background: none;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: white;
+            transition: background-color 0.1s ease;
+            font-family: "Helvetica Neue";
+            font-weight: 200;
+        }
+        button:hover {
+            background-color: rgba(201, 222, 192, 0.6);
+            transition: background-color 0.1s ease;
+        }
+        button:active {
+            background-color: rgba(127, 194, 99, 1);
+        }
+    }
+}
+
+// .productItem {
+//     width: 100%;
+//     height: 50px;
+//     box-sizing: border-box;
+//     display: flex;
+//     border: 1px solid rgba(0,0,0,0.1);
+//     font-family: "Helvetica Neue";
+//     font-size: 13px;
+//     letter-spacing: 1px;
+//     font-weight: 300;
+    
+
+//     // -- Set the contains to flex and center them all vertically
+//     .productName,
+//     .productPrice,
+//     .productButtons {
+//         display: flex;
+//         align-items: center;
+//         white-space: nowrap;
+//         overflow: hidden;
+//         text-overflow: ellipsis;
+//     }
+
+//     // -- Pad text and border off text boxes
+//     .productName,
+//     .productPrice {
+//         text-indent: 20px;
+//         border-right: 1px solid rgba(0,0,0,0.05);
+//     }
+
+//     // -- Ensuring product name size stays largest
+//     .productName {
+//         width: 60%;
+//     }
+
+//     // -- Allow the remaining children to fit equally
+//     .productPrice {
+//         width: 30%;
+//     }
+
+//     // -- Style add button
+//     .productButtons {
+//         display: flex;
+//         justify-content: center;
+//         width: 10%;
+
+//         button {
+//             background: none;
+//             border: 1px solid rgba(0, 0, 0, 0.1);
+//             border-radius: 5px;
+//             margin: 10px;
+//             width: 100%;
+//             height: 60%;
+//             cursor: pointer;
+//             background-color: white;
+//             transition: background-color 0.1s ease;
+//         }
+//         button:hover {
+//             background-color: rgba(201, 222, 192, 1);
+//             transition: background-color 0.1s ease;
+//         }
+//         button:active {
+//             background-color: rgba(127, 194, 99, 1);
+//         }
+//     }
+// }
