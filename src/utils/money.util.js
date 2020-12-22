@@ -12,3 +12,25 @@ export function convertNumberToDollarString(numberToConvert)
         currency : "USD"
     });
 }
+
+
+/**
+ * Add the totals of all cart products to get the cart total
+ *
+ * @export
+ * @param {*} cartProducts
+ * @returns
+ */
+export function calculateCartTotal(cartProducts)
+{
+    if (Array.isArray(cartProducts) && cartProducts.length > 0)
+    {
+        return cartProducts.reduce((acc, cartProduct) => {
+            return acc += cartProduct.total;
+        }, 0)
+    }
+    else
+    {
+        return 0;
+    }
+}

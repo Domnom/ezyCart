@@ -4,6 +4,11 @@
 import React from 'react';
 
 /**
+ * @requires Utils
+ */
+import { ReduxWrapperHOC } from '../../utils';
+
+/**
  * @requires Components
  */
 import { CartList } from './CartList';
@@ -18,7 +23,7 @@ const story = {
 export default story;
 
 const Template = (args) => {
-    return (
+    return ReduxWrapperHOC(
         <CartList {...args} />
     );
 }

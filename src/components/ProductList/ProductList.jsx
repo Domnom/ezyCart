@@ -2,12 +2,15 @@
  * @requires Libraries
  */
 import React, { useMemo } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 /**
  * @requires Redux
  */
-import { selectProducts } from '../../redux'
+import { 
+    selectProducts,
+    addNewProduct
+} from '../../redux'
 
 /** 
  * @requires Components 
@@ -30,7 +33,11 @@ import "./ProductList.scss";
  */
 export function ProductList()
 {
+    // -- Fetch all the products in redux
     const products = useSelector(selectProducts);
+
+    // -- Create a dispatch object for dispatching actions
+    const dispatch = useDispatch();
 
     // -- Memoize the array of product items. We only want to re-render this if the product data changes
     const productItems = useMemo(() => {
@@ -39,7 +46,7 @@ export function ProductList()
         return products.map((product) => {
 
             const clickAdd = () => {
-                // -- TODO: Dispatch an 'addProduct' action
+                dispatch(addNewProduct(product.name));
             }
             
             return (
@@ -53,7 +60,7 @@ export function ProductList()
 
         })
 
-    }, [products]);
+    }, [products, dispatch]);
 
     return (
         <div className="productList">

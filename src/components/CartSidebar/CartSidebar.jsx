@@ -62,7 +62,6 @@ export function CartSidebar(args)
         // -- If the body is open then we want to render the body
         if (bodyIsOpen)
         {
-            // -- Render the main body and 
             return (
                 <div 
                     className="cartSidebarBody" 

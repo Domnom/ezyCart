@@ -2,7 +2,6 @@
  * @requires Libraries
  */
 import React from 'react';
-import PropTypes from 'prop-types';
 
 /**
  * @requires Components
@@ -27,7 +26,7 @@ import './ProductsPage.scss';
  * @param {*} props
  * @returns
  */
-export function ProductsPage(props)
+export function ProductsPage()
 {
     return (
         <section className="ProductsPage">
@@ -42,10 +41,4 @@ export function ProductsPage(props)
             </div>
         </section>
     )
-}
-
-
-
-ProductsPage.propTypes = {
-    header: PropTypes.string
 }
