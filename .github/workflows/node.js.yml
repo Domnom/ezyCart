@@ -28,3 +28,8 @@ jobs:
       run: yarn install
     - name: Run tests
       run: yarn test
+    - name: Cypress run
+      uses: cypress-io/github-action@v2
+      with:
+        browser: chrome
+        start: yarn start
