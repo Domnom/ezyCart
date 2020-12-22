@@ -1,0 +1,52 @@
+.productList {
+
+    height: 100%;
+    width: 100%;
+    font-family: "Helvetica Neue";
+
+    .productListHeader {
+
+        display: grid;
+        grid-template-columns: [name]auto [price]100px [buttons]100px;
+        height: 50px;
+        line-height: 50px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 5px 5px 0px 0px;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-indent: 15px;
+        font-size: 13px;
+
+
+        .productNameTitle, 
+        .productPriceTitle,
+        .productActionsTitle {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .productNameTitle, 
+        .productPriceTitle {
+            border-right: 1px solid rgba(0,0,0,0.1);
+        }
+
+    }
+
+    .productListBody {
+        width: 100%;
+        height: calc(100% - 50px);
+        overflow: scroll;
+
+        .productItem {
+            border-top: none;
+        }
+        .productItem:last-child {
+            border-radius: 0px 0px 5px 5px;
+        }
+    }
+
+    
+
+}
