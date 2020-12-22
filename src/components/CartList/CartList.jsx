@@ -66,7 +66,7 @@ export function CartList()
 
         })
 
-    }, [cartProducts])
+    }, [cartProducts, dispatch])
 
     return (
         <div className="cartList">

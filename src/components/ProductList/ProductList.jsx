@@ -60,7 +60,7 @@ export function ProductList()
 
         })
 
-    }, [products]);
+    }, [products, dispatch]);
 
     return (
         <div className="productList">
